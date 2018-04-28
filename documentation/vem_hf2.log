@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.12)  20 APR 2018 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.4.12)  28 APR 2018 20:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**vem_hf1.tex
-(./vem_hf1.tex
+**vem_hf2.tex
+(./vem_hf2.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -869,21 +869,128 @@ File: tikzlibrarypatterns.code.tex 2008/01/15 v3.0.1a (rcs-revision 1.2)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.cod
 e.tex
 File: pgflibrarypatterns.code.tex 2008/03/03 v3.0.1a (rcs-revision 1.13)
-))) (./vem_hf1.aux)
-\openout1 = `vem_hf1.aux'.
+))) (/usr/share/texlive/texmf-dist/tex/latex/tikz-dimline/tikz-dimline.sty
+Package: tikz-dimline 2013/03/13 v1.0 initial version
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks36
+\t@pgfplots@tokb=\toks37
+\t@pgfplots@tokc=\toks38
+\pgfplots@tmpa=\dimen164
+\c@pgfplots@coordindex=\count118
+\c@pgfplots@scanlineindex=\count119
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgflibraryfpu.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count120
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count121
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count122
+\t@pgfplotstable@a=\toks39
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count123
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+\pgfplots@numplots=\count124
+\pgfplots@xmin@reg=\dimen165
+\pgfplots@xmax@reg=\dimen166
+\pgfplots@ymin@reg=\dimen167
+\pgfplots@ymax@reg=\dimen168
+\pgfplots@zmin@reg=\dimen169
+\pgfplots@zmax@reg=\dimen170
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex
+File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.markings.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.markings.code.tex))
+\dimline@arrow@linewidth=\dimen171
+)
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+) (./vem_hf2.aux)
+\openout1 = `vem_hf2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 
 LaTeX Warning: Please use \usepackage{t1enc} with
@@ -892,17 +999,17 @@ LaTeX Warning: Please use \usepackage{t1enc} with
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen164
+\scratchcounter=\count125
+\scratchdimen=\dimen172
 \scratchbox=\box60
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen165
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks37
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen173
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks41
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -961,16 +1068,27 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 ))
 ABD: EveryShipout initializing macros
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into 
+your preamble.
+ on input line 17.
+
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 LaTeX Info: Redefining \cal on input line 511.
 LaTeX Info: Redefining \mit on input line 512.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 29.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 27.
+(Font)              <6> on input line 29.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 29.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
 Package epstopdf Info: Source file: <logo_bme_kicsi.eps>
 (epstopdf)                    date: 2018-04-13 12:39:15
 (epstopdf)                    size: 437549 bytes
@@ -979,7 +1097,7 @@ Package epstopdf Info: Source file: <logo_bme_kicsi.eps>
 (epstopdf)                    size: 20242 bytes
 (epstopdf)             Command: <repstopdf --outfile=logo_bme_kicsi-eps-convert
 ed-to.pdf logo_bme_kicsi.eps>
-(epstopdf)             \includegraphics on input line 33.
+(epstopdf)             \includegraphics on input line 35.
 Package epstopdf Info: Output file is already uptodate.
 
 <logo_bme_kicsi-eps-converted-to.pdf, id=4, 705.63625pt x 188.705pt>
@@ -987,13 +1105,13 @@ File: logo_bme_kicsi-eps-converted-to.pdf Graphic file (type pdf)
 
 <use logo_bme_kicsi-eps-converted-to.pdf>
 Package pdftex.def Info: logo_bme_kicsi-eps-converted-to.pdf used on input line
- 33.
+ 35.
 (pdftex.def)             Requested size: 212.79076pt x 56.9055pt.
 
 <logo_mm.png, id=5, 185.9748pt x 263.3037pt>
 File: logo_mm.png Graphic file (type png)
  <use logo_mm.png>
-Package pdftex.def Info: logo_mm.png used on input line 37.
+Package pdftex.def Info: logo_mm.png used on input line 39.
 (pdftex.def)             Requested size: 30.1425pt x 42.67912pt.
 
 
@@ -1006,116 +1124,101 @@ Package Fancyhdr Warning: \headheight is too small (20.0pt):
 
 
  <./logo_mm.png> <./logo_bme_kicsi-eps-converted-to.pdf>]
-<vemalaphf1.pdf, id=18, 597.50829pt x 845.0471pt>
-File: vemalaphf1.pdf Graphic file (type pdf)
- <use vemalaphf1.pdf>
-Package pdftex.def Info: vemalaphf1.pdf used on input line 52.
+<vemalaphf4.pdf, id=18, 597.50829pt x 845.0471pt>
+File: vemalaphf4.pdf Graphic file (type pdf)
+ <use vemalaphf4.pdf>
+Package pdftex.def Info: vemalaphf4.pdf used on input line 54.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: vemalaphf1.pdf Graphic file (type pdf)
+File: vemalaphf4.pdf Graphic file (type pdf)
 
-<use vemalaphf1.pdf>
-Package pdftex.def Info: vemalaphf1.pdf used on input line 52.
+<use vemalaphf4.pdf>
+Package pdftex.def Info: vemalaphf4.pdf used on input line 54.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
- <vemalaphf1.pdf, id=21, page=1, 597.50829pt x 845.0471pt>
-File: vemalaphf1.pdf Graphic file (type pdf)
+ <vemalaphf4.pdf, id=21, page=1, 597.50829pt x 845.0471pt>
+File: vemalaphf4.pdf Graphic file (type pdf)
 
-<use vemalaphf1.pdf, page 1>
-Package pdftex.def Info: vemalaphf1.pdf, page1 used on input line 52.
+<use vemalaphf4.pdf, page 1>
+Package pdftex.def Info: vemalaphf4.pdf, page1 used on input line 54.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
-File: vemalaphf1.pdf Graphic file (type pdf)
- <use vemalaphf1.pdf, page 1>
-Package pdftex.def Info: vemalaphf1.pdf, page1 used on input line 52.
+File: vemalaphf4.pdf Graphic file (type pdf)
+ <use vemalaphf4.pdf, page 1>
+Package pdftex.def Info: vemalaphf4.pdf, page1 used on input line 54.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: vemalaphf1.pdf Graphic file (type pdf)
+File: vemalaphf4.pdf Graphic file (type pdf)
 
-<use vemalaphf1.pdf, page 1>
-Package pdftex.def Info: vemalaphf1.pdf, page1 used on input line 52.
+<use vemalaphf4.pdf, page 1>
+Package pdftex.def Info: vemalaphf4.pdf, page1 used on input line 54.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: vemalaphf1.pdf Graphic file (type pdf)
- <use vemalaphf1.pdf, page 1>
-Package pdftex.def Info: vemalaphf1.pdf, page1 used on input line 52.
+File: vemalaphf4.pdf Graphic file (type pdf)
+ <use vemalaphf4.pdf, page 1>
+Package pdftex.def Info: vemalaphf4.pdf, page1 used on input line 54.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
-File: vemalaphf1.pdf Graphic file (type pdf)
+File: vemalaphf4.pdf Graphic file (type pdf)
 
-<use vemalaphf1.pdf, page 1>
-Package pdftex.def Info: vemalaphf1.pdf, page1 used on input line 52.
+<use vemalaphf4.pdf, page 1>
+Package pdftex.def Info: vemalaphf4.pdf, page1 used on input line 54.
 (pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
- [1 <./vemalaphf1.pdf>] (./vem_hf1.toc)
+ [1 <./vemalaphf4.pdf>] (./vem_hf2.toc)
 \tf@toc=\write4
-\openout4 = `vem_hf1.toc'.
+\openout4 = `vem_hf2.toc'.
 
  [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 72.
+(Font)              <7> on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 72.
+(Font)              <5> on input line 80.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (7.26924pt too wide) in paragraph at lines 78--86
+Overfull \hbox (18.9726pt too wide) in paragraph at lines 153--154
  [] 
  []
 
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-[1] [2] (./vem_hf1.aux) ) 
+[1] [2] (./vem_hf2.aux) ) 
 Here is how much of TeX's memory you used:
- 18118 strings out of 493029
- 384534 string characters out of 6136234
- 565798 words of memory out of 5000000
- 21275 multiletter control sequences out of 15000+600000
- 8194 words of font info for 29 fonts, out of 8000000 for 9000
+ 26987 strings out of 493029
+ 679933 string characters out of 6136234
+ 1009546 words of memory out of 5000000
+ 30005 multiletter control sequences out of 15000+600000
+ 9476 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,74p,411b,822s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,79p,747b,828s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on vem_hf1.pdf (5 pages, 236438 bytes).
+m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on vem_hf2.pdf (5 pages, 244782 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 130 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

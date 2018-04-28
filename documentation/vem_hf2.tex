@@ -9,6 +9,8 @@
 \usepackage{fancyhdr} % for the header on the first page
 \usepackage{pdfpages} % to include pdf
 \usepackage{structuralanalysis} % for the figures
+\usepackage{tikz-dimline}
+\usepackage{wasysym}
 
 
 
@@ -20,7 +22,7 @@
 		\rhead{\large{\textbf{Végeselem módszer alapjai}}\\
 			BMEGEMMAGMV}
 		%\vspace{15cm}
-		\title{\huge Kötelező házi feladat 1
+		\title{\huge Kötelező házi feladat 2
 		}
 		\author{Tar Dániel\\GUTOY7}
 		\date{\today}
@@ -40,16 +42,16 @@
 	%\includepdf{vemalaphf1.pdf}
 	 \includepdf[picturecommand*={
 	    	\put(460,759){Tar Dániel}
-	    	\put(460,740){GUTOY7}
-	    	\put(280,677){2}
-	    	\put(327,677){1}
-	    	\put(370,677){2}
-	    	\put(415,677){2}
+	    	\put(460,742){GUTOY7}
+	    	\put(280,680){2}
+	    	\put(325,680){1}
+	    	\put(368,680){2}
+	    	\put(410,680){2}
 	    	\put(115,63){eredmeny1}
 	    	\put(245,63){eredmeny2}
 	    	\put(370,63){eredmeny3}
 	    	\put(490,63){eredmeny4}
-	 }]{vemalaphf1.pdf}
+	 }]{vemalaphf4.pdf}
 	\newpage
 	
 	
@@ -69,17 +71,17 @@
 	
 	\section{Feladat}
 	
-	A házifeladat kód alapján az adatokat átszámolva $[N][mm][MPa]$ alapra:
+	A házifeladat kód alapján az adatok SI mértékegység alapján:
 	
 	\begin{table}[h!]
 		\begin{center}
 			\caption{Adatok}
 			\label{tab:table1}
-			\begin{tabular}{c|c|c|c|c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-				$E$ & $d_{1}$ & $d_{2}$ & $a$ & $b$ & $c$ & $p_{1}$ & $F_{1}$ & $M_{1}$ \\
-				$[MPa]$ & $[mm]$ & $[mm]$ & $[mm]$ & $[mm]$ & $[mm]$ & $[N/mm]$ & $[N]$ & $[Nmm]$\\
+			\begin{tabular}{c|c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+				$a$ & $m_{0}$ & $b$ & $d$ & $E$ & $/ro$\\
+				$[m]$ & $[kg]$ & $[m]$ & $[m]$ & $[Pa]$ & $[kg/m^{3}]$\\
 				\hline
-				$185\cdot10^3$ & 27 & 54 & 230 & 460 & 610 & -2.5 & -3000 & -0.75\\
+				1.2 & 15 & 6 & 35 & $190\cdot10^3$ & 6500\\
 				%2 & 10.1 & b\\
 				%3 & 23.113231 & c\\
 			\end{tabular}
@@ -91,8 +93,12 @@
 	\end{flushleft}
 	
 	%\newcommand{\newCommandName}{text to insert}
-	\newcommand{\degy}{8}
-	\newcommand{\dketto}{16}
+	\newcommand{\sugar}{2}
+	\newcommand{\ab}{600}
+	\newcommand{\bc}{120}
+	\newcommand{\acv}{701}
+	\newcommand{\ac}{720}
+	
 	
 	\begin{figure}[h!]
 		
@@ -102,68 +108,51 @@
 			\scaling{.015};
 			
 			% x and y axis
-			\draw[->] (0,0)--(10,0) node[right]{$x$};
-			\draw[->] (0,0)--(0,3) node[above]{$y$};
+			\draw[->] (0,0)--(12,0) node[right]{$x$};
+			\draw[->] (0,0)--(0,2) node[above]{$y$};
 			
 			% auxiliary points
 			\point{a}{0}{0};
-			\point{b}{230}{0};
-			\point{c}{460}{0};
-			\point{d}{610}{0};
-			\point{e}{0}{\dketto}; %only to see it works :D
-			\point{f}{0}{-\dketto};
-			\point{g}{460}{\dketto};
-			\point{h}{460}{-\dketto};
-			\point{i}{460}{\degy};
-			\point{j}{460}{-\degy};
-			\point{k}{610}{\degy};
-			\point{l}{610}{-\degy};
+			\point{a1}{0}{-\sugar};
+			\point{a2}{0}{\sugar};
 			
+			\point{b}{\ab}{0};
+			\point{c}{\ac}{0};
+			\point{c1}{\acv}{-\sugar};
+			\point{c2}{\acv}{\sugar};
+			\point{d}{200}{0};
 			
-			\point{a2}{0}{78};
-			\point{b2}{230}{53};
-			\point{c2}{450}{-\dketto};
-			\point{d2}{610}{53};
+			\draw[thick] (10.8,0) circle (0.3cm);
 			
 			% stucture
-			\beam{2}{e}{f};
-			\beam{2}{e}{g};
-			\beam{2}{f}{h};
-			\beam{2}{g}{h};
-			\beam{2}{i}{k};
-			\beam{2}{j}{l};
+			\beam{2}{a1}{c1};
+			\beam{2}{a2}{c2};
+			
 			
 			%\support{type}{insertion point}[rotation];
 			\support{2}{b};
-			\support{3}{d}[90];
+			\support{3}{a}[-90];
 			
-			% loads
-			% \load{type}{insertion point}[rotation][length or included angle][loaddistance];
-			\load{1}{a2}[90][-1];
-			\load{3}{c}[25][200][0.7];
-			\lineload{2}{b2}{d2}[-0.83][-0.83];
+			\notation{1}{a}{$A$}[below=8mm];
+			\notation{1}{b}{$B$}[below=10mm];
+			\notation{1}{c}{$C$}[below=10mm];
+			\notation{1}{d}{$\diameter35~mm$}[above=1mm];
+			\notation{1}{c2}{$m_{0}$}[above right=2mm];
 			
 			% dimensions
-			\dimensioning{1}{a}{b}{-1.2}[$230~mm$];
-			\dimensioning{1}{a}{c}{-2.2}[$460~mm$];
-			\dimensioning{1}{a}{d}{-3.2}[$610~mm$];
+			\dimensioning{1}{a}{b}{-1.8}[$6~m$];
+			\dimensioning{1}{b}{c}{-1.8}[$1.2~m$];
+			%\dimensioning{2}{c1}{c2}{-1}[35];
 			%\dimensioning{2}{f}{e}{-1}[$54$];
 			
 			
 			
-			\notation{1}{a}{$A$}[left];
-			\notation{1}{b}{$B$}[above left=2.5mm];
-			\notation{1}{c}{$C$}[below right=2.5mm];
-			\notation{1}{d}{$D$}[above right=2.5mm];
 			
-			\notation{1}{a2}{$F_{1}$}[right];
-			\notation{1}{b2}{$p_{1}$}[below right];
-			\notation{1}{c2}{$M_{1}$}[below=1mm];
 			
 			
 			\end{tikzpicture}
 		\end{center}	
-		\caption{Méretarányos ábra és a terhelések}
+		\caption{Méretarányos ábra és a kényszerek}
 	\end{figure}
 	
 	\newpage

@@ -159,10 +159,6 @@
 	%---------------------
 	\section{Feladat}
 	
-		This formula $f(x) = x^2$ is an example.
-		
-		
-		
 	Végeselem modell az $m_{0}$ tömeg elhanyagolásával és az \textbf{AB} szakaszon 1 elem használatával:
 	\begin{figure}[h!]		
 		\begin{center}	
@@ -196,7 +192,7 @@
 				\notation{4}{b}{c}[2] 
 			\end{tikzpicture}
 		\end{center}	
-	%\caption{}
+	\caption{}
 	\end{figure}
 	
 	
@@ -209,7 +205,8 @@
 	% 3.feladat
 	%---------------------
 	\section{Feladat}
-	This formula $f(x) = x^2$ is an example.
+		
+	Végeselem modell az $m_{0}$ tömeg elhanyagolásával és az \textbf{AB} szakaszon 2 elem használatával:
 	
 	\begin{figure}[h!]		
 		\begin{center}	
@@ -249,10 +246,59 @@
 				\notation{4}{b}{c}[3] 
 			\end{tikzpicture}
 		\end{center}	
-	\caption{Végeselem modell az $m_{0}$ tömeg elhanyagolásával és az \textbf{AB} szakaszon 2 elem használatával}
+	\caption{}
 	\end{figure}
 	
+	%---------------------
+	% 4.feladat
+	%---------------------
+	\section{Feladat}
 	
+	Végeselem modell az \textbf{AB} szakaszon 2 elem használatával:
 	
+	\begin{figure}[h!]		
+		\begin{center}
+			\begin{tikzpicture}
+			\scaling{.015};
+			% auxiliary points
+			\point{a}{0}{0};
+			\point{b}{\ab}{0};
+			\point{b1}{\ab/2}{0};
+			\point{c}{\acvv}{0};
+			\point{d}{200}{0};
+			\point{d2}{210}{35};
+			
+			\beam{2}{a}{b1};
+			\beam{2}{b1}{b};
+			\beam{2}{b}{c};
+			
+			\support{2}{b};
+			\support{3}{a}[-90];
+			
+			%\hinge{1}{A};
+			\hinge{1}{b1};
+			\hinge{1}{b};
+			\hinge{1}{c};
+			
+			\notation{1}{a}{$(1)$}[above right];
+			\notation{1}{b1}{$(2)$}[above];
+			\notation{1}{b}{$(3)$}[above];
+			\notation{1}{c}{$(4)$}[above=0.25];
+			\notation{1}{c}{$m_0$}[right=0.4];
+			
+			\notation{5}{a}{b1}[$I, E, A, \rho $][.5][below];
+			\notation{5}{b1}{b}[$I, E, A, \rho $][.5][below];
+			\notation{5}{b}{c}[$I, E, A, \rho $][.5][below];
+			
+			\notation{4}{a}{b1}[1]
+			\notation{4}{b1}{b}[2]
+			\notation{4}{b}{c}[3] 
+			
+			\draw[thick, inner color=white] (c) circle (3.5mm);
+			
+			\end{tikzpicture}
+		\end{center}	
+	\caption{}
+	\end{figure}
 
 \end{document}

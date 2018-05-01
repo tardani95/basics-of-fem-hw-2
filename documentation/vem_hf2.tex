@@ -210,7 +210,7 @@
 	\end{figure}
 	
 	\begin{flushleft}
-		A rúdelemek paraméteres elemi mátrixai:
+		A rúdelemek paraméteres elemi mátrixai, és 2x2-es almátrixokkal való helyettesítése:
 	\end{flushleft}
 	
 	\begin{itemize}
@@ -245,6 +245,25 @@
 		\end{equation}
 	\end{itemize}
 	
+	A globális merevségi- és tömegmátrixok összállítása: 
+	\begin{equation}
+		K_G=
+		\begin{bmatrix}
+		K_{11}^{(1)} & K_{12}^{(1)}              & 0            \\
+		K_{21}^{(1)} & K_{22}^{(1)}+K_{11}^{(2)} & K_{12}^{(2)} \\
+		0            & K_{21}^{(2)}              & K_{22}^{(2)} \\
+		\end{bmatrix}
+	\end{equation}
+	
+	\begin{equation}
+		M_G=
+		\begin{bmatrix}
+		M_{11}^{(1)} & M_{12}^{(1)}              & 0            \\
+		M_{21}^{(1)} & M_{22}^{(1)}+M_{11}^{(2)} & M_{12}^{(2)} \\
+		0            & M_{21}^{(2)}              & M_{22}^{(2)} \\
+		\end{bmatrix}
+	\end{equation}
+	 
 	
 	
 

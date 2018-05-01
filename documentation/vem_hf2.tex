@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[hungarian]{babel}
 
+
 \usepackage{lipsum}
 \usepackage{graphicx} % for the includegrapichs
 \usepackage{titling}
@@ -11,6 +12,10 @@
 \usepackage{structuralanalysis} % for the figures
 \usepackage{tikz-dimline}
 \usepackage{wasysym}
+
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{t1enc}
 
 
 
@@ -75,7 +80,7 @@
 	\section{Feladat}
 	
 	A házifeladat kód alapján az adatok SI mértékegységrendszerben:
-	
+	\def\arraystretch{1.2}%
 	\begin{table}[h!]
 		\begin{center}
 			\caption{Adatok}
@@ -84,24 +89,25 @@
 				$a$ & $m_{0}$ & $b$ & $d$ & $E$ & $\rho$\\
 				$[m]$ & $[kg]$ & $[m]$ & $[m]$ & $[Pa]$ & $[kg/m^{3}]$\\
 				\hline
-				1.2 & 15 & 6 & 35 & $190\cdot10^3$ & 6500\\
+				1,2 & 15 & 6 & 35 & $190\cdot10^3$ & 6500\\
 				%2 & 10.1 & b\\
 				%3 & 23.113231 & c\\
 			\end{tabular}
 		\end{center}
 	\end{table}
+	\def\arraystretch{1}%
 	
 	Továbbá a rúd keresztmetszetének a felülete:
 	\begin{equation}
-	A=\frac{d^{2}\cdot\pi}{4}=xd~[m^{2}]
+	A=\frac{d^{2}\cdot\pi}{4}=9,6211 \cdot 10^{-4}~[m^{2}]
 	\end{equation}
 	
 	És a másodrendű nyomatéka:
 	\begin{equation}
-	I=\frac{d^4\cdot\pi}{64}=1,9175\cdot 10^{-8}~[m^{4}]
+	I_{z}=\frac{d^4\cdot\pi}{64}=7,3662 \cdot 10^{-8}~[m^{4}]
 	\end{equation}
 	
-	A terheléseket arányosan és mindenhol a pozitív irányba vettem fel, hogy megegyezzen a feladatleírásban szereplő ábrával.
+	Méretarányos ábra és a kényszerek:
 	
 	%\newcommand{\newCommandName}{text to insert}
 	\newcommand{\sugar}{2}
@@ -157,7 +163,7 @@
 				%\dimensioning{2}{f}{e}{-1}[$54$];		
 			\end{tikzpicture}
 		\end{center}	
-	\caption{Méretarányos ábra és a kényszerek}
+	\caption{}
 	\end{figure}
 	
 	\newpage
@@ -203,6 +209,45 @@
 	\caption{}
 	\end{figure}
 	
+	\begin{flushleft}
+		A rúdelemek paraméteres elemi mátrixai:
+	\end{flushleft}
+	
+	\begin{itemize}
+		\item Az elemi merevségi mátrix:
+		\begin{equation}
+		K_e= \frac{I_{z} \cdot E}{L^3}  
+		\begin{bmatrix}
+		12&6L&-12&6L\\
+		6L&4L^2&-6L&2L^2\\
+		-12&-6L&12&-6L\\
+		6L&2L^2&-6L&4L^2\\
+		\end{bmatrix}
+		=\begin{bmatrix}
+		K_{11} &K_{12} \\
+		K_{21} &K_{22} \\
+		\end{bmatrix}
+		\end{equation}
+		
+		\item Az elemi tömegmátrix:
+		\begin{equation}
+		M_e= \frac{\rho \cdot A \cdot L}{420}  
+		\begin{bmatrix}
+		156&22L&54&-13L\\
+		22L&4L^2&13L&-3L^2\\
+		54&13L&156&-22L\\
+		-13L&-3L^2&-22L&4L^2\\
+		\end{bmatrix}
+		=\begin{bmatrix}
+		M_{11} &M_{12} \\
+		M_{21} &M_{22} \\
+		\end{bmatrix}
+		\end{equation}
+	\end{itemize}
+	
+	
+	
+
 	
 	\begin{equation}
 	f(x)=x^2

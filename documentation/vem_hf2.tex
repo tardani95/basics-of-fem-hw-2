@@ -173,7 +173,8 @@
 	%---------------------
 	\section{Feladat}
 	
-	Végeselem modell az $m_{0}$ tömeg elhanyagolásával és az \textbf{AB} szakaszon 1 elem használatával:
+	\subsection{Végeselem modell az $m_{0}$ tömeg elhanyagolásával és az \textbf{AB} szakaszon 1 elem használatával}
+	
 	\begin{figure}[h!]		
 		\begin{center}	
 			\begin{tikzpicture}
@@ -209,14 +210,12 @@
 	\caption{}
 	\end{figure}
 	
-	\begin{flushleft}
-		A rúdelemek paraméteres elemi mátrixai, és 2x2-es almátrixokkal való helyettesítése:
-	\end{flushleft}
+	\subsection{A rúdelemek paraméteres elemi mátrixai, és 2x2-es almátrixokkal való helyettesítése}
 	
-	\begin{itemize}
-		\item Az elemi merevségi mátrix:
+	
+		Az elemi merevségi mátrix:
 		\begin{equation}
-		K_e= \frac{I_{z} \cdot E}{L^3}  
+		K_{e,4\times4}= \frac{I_{z} \cdot E}{L^3}  
 		\begin{bmatrix}
 		12&6L&-12&6L\\
 		6L&4L^2&-6L&2L^2\\
@@ -229,9 +228,9 @@
 		\end{bmatrix}
 		\end{equation}
 		
-		\item Az elemi tömegmátrix:
+		Az elemi tömegmátrix:
 		\begin{equation}
-		M_e= \frac{\rho \cdot A \cdot L}{420}  
+		M_{e,4\times4}= \frac{\rho \cdot A \cdot L}{420}  
 		\begin{bmatrix}
 		156&22L&54&-13L\\
 		22L&4L^2&13L&-3L^2\\
@@ -243,30 +242,84 @@
 		M_{21} &M_{22} \\
 		\end{bmatrix}
 		\end{equation}
-	\end{itemize}
 	
-	A globális merevségi- és tömegmátrixok összállítása: 
-	\begin{equation}
-		K_G=
-		\begin{bmatrix}
-		K_{11}^{(1)} & K_{12}^{(1)}              & 0            \\
-		K_{21}^{(1)} & K_{22}^{(1)}+K_{11}^{(2)} & K_{12}^{(2)} \\
-		0            & K_{21}^{(2)}              & K_{22}^{(2)} \\
-		\end{bmatrix}
-	\end{equation}
 	
-	\begin{equation}
-		M_G=
-		\begin{bmatrix}
-		M_{11}^{(1)} & M_{12}^{(1)}              & 0            \\
-		M_{21}^{(1)} & M_{22}^{(1)}+M_{11}^{(2)} & M_{12}^{(2)} \\
-		0            & M_{21}^{(2)}              & M_{22}^{(2)} \\
-		\end{bmatrix}
-	\end{equation}
+	
+	\subsection{A globális merevségi- és tömegmátrixok összállítása}
+		
+		Globális merevségi mátrix:
+		\begin{equation}
+			K_{G,6\times6}=
+			\begin{bmatrix}
+			K_{11}^{(1)} & K_{12}^{(1)}              & 0            \\
+			K_{21}^{(1)} & K_{22}^{(1)}+K_{11}^{(2)} & K_{12}^{(2)} \\
+			0            & K_{21}^{(2)}              & K_{22}^{(2)} \\
+			\end{bmatrix}
+		\end{equation}
+		
+		Globális tömegmátrix mátrix:
+		\begin{equation}
+			M_{G,6\times6}=
+			\begin{bmatrix}
+			M_{11}^{(1)} & M_{12}^{(1)}              & 0            \\
+			M_{21}^{(1)} & M_{22}^{(1)}+M_{11}^{(2)} & M_{12}^{(2)} \\
+			0            & M_{21}^{(2)}              & M_{22}^{(2)} \\
+			\end{bmatrix}
+		\end{equation}
 	 
 	
+	\subsection{A mátrixok kondenzálása a lekötött szabadsági fokok alapján}	
 	
-
+	Az elmozdulásvektor:
+	
+	\begin{equation}
+		U=
+		\begin{bmatrix}
+		V_{1}    \\
+		\Phi_{1} \\
+		V_{2}    \\
+		\Phi_{2} \\
+		V_{3}    \\
+		\Phi_{3} \\
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+		0  \\
+		0 \\
+		0    \\
+		\Phi_{2} \\
+		V_{3}    \\
+		\Phi_{3} \\
+		\end{bmatrix}
+	\end{equation}
+	
+	A kondenzált merevségi mátrix: 
+	\begin{equation}
+		K_{G,K,6\times6}=
+		\begin{bmatrix}
+		0            & 0             & 0             & 0             & 0             & 0            \\
+		0            & 0             & 0             & 0             & 0             & 0            \\
+		0            & 0             & 0             & 0             & 0             & 0            \\
+		0			 & 0			 & 0			 & K_{G_{44}}	 & K_{G_{45}}	 & K_{G_{46}}   \\
+		0			 & 0			 & 0			 & K_{G_{54}}	 & K_{G_{55}}	 & K_{G_{56}}   \\
+		0			 & 0			 & 0			 & K_{G_{64}}	 & K_{G_{65}}	 & K_{G_{66}}   \\
+		\end{bmatrix}
+	\end{equation}
+	
+	A kondenzált merevségi mátrix: 
+	\begin{equation}
+		M_{G,K,6\times6}=
+		\begin{bmatrix}
+		0            & 0             & 0             & 0             & 0             & 0            \\
+		0            & 0             & 0             & 0             & 0             & 0            \\
+		0            & 0             & 0             & 0             & 0             & 0            \\
+		0			 & 0			 & 0			 & M_{G_{44}}	 & M_{G_{45}}	 & M_{G_{46}}   \\
+		0			 & 0			 & 0			 & M_{G_{54}}	 & M_{G_{55}}	 & M_{G_{56}}   \\
+		0			 & 0			 & 0			 & M_{G_{64}}	 & M_{G_{65}}	 & M_{G_{66}}   \\
+		\end{bmatrix}
+	\end{equation}
+	
+	
 	
 	\begin{equation}
 	f(x)=x^2

@@ -69,6 +69,9 @@
 	
 	%\newpage
 	
+	%---------------------
+	% 1.feladat
+	%---------------------
 	\section{Feladat}
 	
 	A házifeladat kód alapján az adatok SI mértékegység alapján:
@@ -78,7 +81,7 @@
 			\caption{Adatok}
 			\label{tab:table1}
 			\begin{tabular}{c|c|c|c|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
-				$a$ & $m_{0}$ & $b$ & $d$ & $E$ & $/ro$\\
+				$a$ & $m_{0}$ & $b$ & $d$ & $E$ & $\rho$\\
 				$[m]$ & $[kg]$ & $[m]$ & $[m]$ & $[Pa]$ & $[kg/m^{3}]$\\
 				\hline
 				1.2 & 15 & 6 & 35 & $190\cdot10^3$ & 6500\\
@@ -98,74 +101,156 @@
 	\newcommand{\bc}{120}
 	\newcommand{\acv}{701}
 	\newcommand{\ac}{720}
+	\newcommand{\acvv}{735}
 	
 	
-	\begin{figure}[h!]
-		
-		
+	\begin{figure}[h!]		
 		\begin{center}
 			\begin{tikzpicture}
-			\scaling{.015};
-			
-			% x and y axis
-			\draw[->] (0,0)--(12,0) node[right]{$x$};
-			\draw[->] (0,0)--(0,2) node[above]{$y$};
-			
-			% auxiliary points
-			\point{a}{0}{0};
-			\point{a1}{0}{-\sugar};
-			\point{a2}{0}{\sugar};
-			
-			\point{b}{\ab}{0};
-			\point{c}{\ac}{0};
-			\point{c1}{\acv}{-\sugar};
-			\point{c2}{\acv}{\sugar};
-			\point{d}{200}{0};
-			
-			\draw[thick] (10.8,0) circle (0.3cm);
-			
-			% stucture
-			\beam{2}{a1}{c1};
-			\beam{2}{a2}{c2};
-			
-			
-			%\support{type}{insertion point}[rotation];
-			\support{2}{b};
-			\support{3}{a}[-90];
-			
-			\notation{1}{a}{$A$}[below=8mm];
-			\notation{1}{b}{$B$}[below=10mm];
-			\notation{1}{c}{$C$}[below=10mm];
-			\notation{1}{d}{$\diameter35~mm$}[above=1mm];
-			\notation{1}{c2}{$m_{0}$}[above right=2mm];
-			
-			% dimensions
-			\dimensioning{1}{a}{b}{-1.8}[$6~m$];
-			\dimensioning{1}{b}{c}{-1.8}[$1.2~m$];
-			%\dimensioning{2}{c1}{c2}{-1}[35];
-			%\dimensioning{2}{f}{e}{-1}[$54$];
-			
-			
-			
-			
-			
-			
+				\scaling{.015};
+				
+				% x and y axis
+				\draw[->] (0,0)--(12,0) node[right]{$x$};
+				\draw[->] (0,0)--(0,2) node[above]{$y$};
+				
+				% auxiliary points
+				\point{a}{0}{0};
+				\point{a1}{0}{-\sugar};
+				\point{a2}{0}{\sugar};
+				
+				\point{b}{\ab}{0};
+				\point{c}{\ac}{0};
+				\point{c1}{\acv}{-\sugar};
+				\point{c2}{\acv}{\sugar};
+				\point{d}{200}{0};
+				\point{d2}{210}{35};
+				
+				\draw[thick] (c) circle (0.3cm);
+				\draw (d) -- (d2);
+				
+				% stucture
+				\beam{2}{a1}{c1};
+				\beam{2}{a2}{c2};
+				
+				%\support{type}{insertion point}[rotation];
+				\support{2}{b};
+				\support{3}{a}[-90];
+				
+				\notation{1}{a}{$A$}[below=8mm];
+				\notation{1}{b}{$B$}[below=10mm];
+				\notation{1}{c}{$C$}[below=10mm];
+				\notation{1}{d2}{$\diameter35~mm$}[above];
+				\notation{1}{c2}{$m_{0}$}[above right=2mm];
+				
+				% dimensions
+				\dimensioning{1}{a}{b}{-1.8}[$6~m$];
+				\dimensioning{1}{b}{c}{-1.8}[$1.2~m$];
+				%\dimensioning{2}{c1}{c2}{-1}[35];
+				%\dimensioning{2}{f}{e}{-1}[$54$];		
 			\end{tikzpicture}
 		\end{center}	
-		\caption{Méretarányos ábra és a kényszerek}
+	\caption{Méretarányos ábra és a kényszerek}
 	\end{figure}
 	
 	\newpage
-		
+	
+	%---------------------
+	% 2.feladat
+	%---------------------
 	\section{Feladat}
-	This formula $f(x) = x^2$ is an example.
+	
+		This formula $f(x) = x^2$ is an example.
+		
+		
+		
+	Végeselem modell az $m_{0}$ tömeg elhanyagolásával és az \textbf{AB} szakaszon 1 elem használatával:
+	\begin{figure}[h!]		
+		\begin{center}	
+			\begin{tikzpicture}
+				\scaling{.015};
+				% auxiliary points
+				\point{a}{0}{0};
+				\point{b}{\ab}{0};
+				\point{c}{\acvv}{0};
+				\point{d}{200}{0};
+				\point{d2}{210}{35};
+				
+				\beam{2}{a}{b};
+				\beam{2}{b}{c};
+				
+				\support{2}{b};
+				\support{3}{a}[-90];
+				
+				%\hinge{1}{a};
+				\hinge{1}{b};
+				\hinge{1}{c};
+				
+				\notation{1}{a}{$(1)$}[above right];
+				\notation{1}{b}{$(2)$}[above];
+				\notation{1}{c}{$(3)$}[above];
+				
+				\notation{5}{a}{b}[$I, E, A, \rho $][.5][below];
+				\notation{5}{b}{c}[$I, E, A, \rho $][.5][below];
+				
+				\notation{4}{a}{b}[1]
+				\notation{4}{b}{c}[2] 
+			\end{tikzpicture}
+		\end{center}	
+	%\caption{}
+	\end{figure}
+	
+	
 	\begin{equation}
 	f(x)=x^2
 	\end{equation}
 	This formula $f(x) = x^2$ is an example.
+	
+	%---------------------
+	% 3.feladat
+	%---------------------
 	\section{Feladat}
 	This formula $f(x) = x^2$ is an example.
 	
+	\begin{figure}[h!]		
+		\begin{center}	
+			\begin{tikzpicture}
+				\scaling{.015};
+				% auxiliary points
+				\point{a}{0}{0};
+				\point{b}{\ab}{0};
+				\point{b1}{\ab/2}{0};
+				\point{c}{\acvv}{0};
+				\point{d}{200}{0};
+				\point{d2}{210}{35};
+				
+				\beam{2}{a}{b1};
+				\beam{2}{b1}{b};
+				\beam{2}{b}{c};
+				
+				\support{2}{b};
+				\support{3}{a}[-90];
+				
+				%\hinge{1}{A};
+				\hinge{1}{b1};
+				\hinge{1}{b};
+				\hinge{1}{c};
+				
+				\notation{1}{a}{$(1)$}[above right];
+				\notation{1}{b1}{$(2)$}[above];
+				\notation{1}{b}{$(3)$}[above];
+				\notation{1}{c}{$(4)$}[above];
+				
+				\notation{5}{a}{b1}[$I, E, A, \rho $][.5][below];
+				\notation{5}{b1}{b}[$I, E, A, \rho $][.5][below];
+				\notation{5}{b}{c}[$I, E, A, \rho $][.5][below];
+				
+				\notation{4}{a}{b1}[1]
+				\notation{4}{b1}{b}[2]
+				\notation{4}{b}{c}[3] 
+			\end{tikzpicture}
+		\end{center}	
+	\caption{Végeselem modell az $m_{0}$ tömeg elhanyagolásával és az \textbf{AB} szakaszon 2 elem használatával}
+	\end{figure}
 	
 	
 	

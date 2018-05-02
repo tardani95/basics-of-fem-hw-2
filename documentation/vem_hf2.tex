@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[hungarian]{babel}
 
+\usepackage{amsmath}
 
 \usepackage{lipsum}
 \usepackage{graphicx} % for the includegrapichs
@@ -13,9 +14,11 @@
 \usepackage{tikz-dimline}
 \usepackage{wasysym}
 
+
+
 \usepackage{multicol}
-\usepackage{amsmath}
 \usepackage{t1enc}
+\usepackage{textcomp}
 
 
 
@@ -268,63 +271,87 @@
 		\end{equation}
 	 
 	
-	\subsection{A mátrixok kondenzálása a lekötött szabadsági fokok alapján}	
+	\subsection{A mátrixok kondenzálása a lekötött szabadsági fokok alapján}
 	
-	Az elmozdulásvektor:
+		Lekötött szabadsági fokok:
+		
+		\[V_{1}=0 \qquad \Phi_{1}=0 \qquad V_{2}=0\]	
 	
-	\begin{equation}
-		U=
-		\begin{bmatrix}
-		V_{1}    \\
-		\Phi_{1} \\
-		V_{2}    \\
-		\Phi_{2} \\
-		V_{3}    \\
-		\Phi_{3} \\
-		\end{bmatrix}
-		=
-		\begin{bmatrix}
-		0  \\
-		0 \\
-		0    \\
-		\Phi_{2} \\
-		V_{3}    \\
-		\Phi_{3} \\
-		\end{bmatrix}
-	\end{equation}
+		Az elmozdulásvektor:
+		
+		\begin{equation}
+			U=
+			\begin{bmatrix}
+			V_{1}    \\
+			\Phi_{1} \\
+			V_{2}    \\
+			\Phi_{2} \\
+			V_{3}    \\
+			\Phi_{3} \\
+			\end{bmatrix}
+			=
+			\begin{bmatrix}
+			0  \\
+			0 \\
+			0    \\
+			\Phi_{2} \\
+			V_{3}    \\
+			\Phi_{3} \\
+			\end{bmatrix}
+		\end{equation}
+		
+		A kondenzált merevségi mátrix: 
+		\begin{equation}
+			K_{G,K,3\times3}=
+			\begin{bmatrix}
+			 K_{G_{44}}	 & K_{G_{45}}	 & K_{G_{46}}   \\
+			 K_{G_{54}}	 & K_{G_{55}}	 & K_{G_{56}}   \\
+			 K_{G_{64}}	 & K_{G_{65}}	 & K_{G_{66}}   \\
+			\end{bmatrix}
+		\end{equation}
+		
+		A kondenzált merevségi mátrix: 
+		\begin{equation}
+			M_{G,K,3\times3}=
+			\begin{bmatrix}
+			 M_{G_{44}}	 & M_{G_{45}}	 & M_{G_{46}}   \\
+			 M_{G_{54}}	 & M_{G_{55}}	 & M_{G_{56}}   \\
+			 M_{G_{64}}	 & M_{G_{65}}	 & M_{G_{66}}   \\
+			\end{bmatrix}
+		\end{equation}
+		
+		A kondenzált elmozdulásvektor:
+		\begin{equation}
+			U_K=
+			\begin{bmatrix}
+				\Phi_{2} \\
+				V_{3}    \\
+				\Phi_{3} \\
+			\end{bmatrix}
+		\end{equation} 
 	
-	A kondenzált merevségi mátrix: 
-	\begin{equation}
-		K_{G,K,6\times6}=
-		\begin{bmatrix}
-		0            & 0             & 0             & 0             & 0             & 0            \\
-		0            & 0             & 0             & 0             & 0             & 0            \\
-		0            & 0             & 0             & 0             & 0             & 0            \\
-		0			 & 0			 & 0			 & K_{G_{44}}	 & K_{G_{45}}	 & K_{G_{46}}   \\
-		0			 & 0			 & 0			 & K_{G_{54}}	 & K_{G_{55}}	 & K_{G_{56}}   \\
-		0			 & 0			 & 0			 & K_{G_{64}}	 & K_{G_{65}}	 & K_{G_{66}}   \\
-		\end{bmatrix}
-	\end{equation}
+	\subsection{A sajátkörfrekvenciák számítása az órán tanult képlet segítségével}
 	
-	A kondenzált merevségi mátrix: 
-	\begin{equation}
-		M_{G,K,6\times6}=
-		\begin{bmatrix}
-		0            & 0             & 0             & 0             & 0             & 0            \\
-		0            & 0             & 0             & 0             & 0             & 0            \\
-		0            & 0             & 0             & 0             & 0             & 0            \\
-		0			 & 0			 & 0			 & M_{G_{44}}	 & M_{G_{45}}	 & M_{G_{46}}   \\
-		0			 & 0			 & 0			 & M_{G_{54}}	 & M_{G_{55}}	 & M_{G_{56}}   \\
-		0			 & 0			 & 0			 & M_{G_{64}}	 & M_{G_{65}}	 & M_{G_{66}}   \\
-		\end{bmatrix}
-	\end{equation}
+		\begin{equation}
+			det(K_{G,K} - \omega^2 \cdot M_{G,K}) = 0
+		\end{equation}
+		
+		A sajátértékenként az $\omega^2$-eket kapjuk, majd ebből a sajátfrekvenciák:
+		
+		\begin{equation}
+			f_{1,2,3}=\frac{\omega_{1,2,3}}{2\cdot \pi}
+		\end{equation}
+		
+		Amivel a sajátfrekvenciák:	
+		\[f_1^a=1,6197\, [Hz] \qquad f_2^a=7,6607\, [Hz] \qquad f_3^a=30,4388\, [Hz]  \]
+		
+		!!TODO: sikerz ellenőrzés és eredmények kijavítása, eredmenyek ellenőrzése. \\
+		
+		
+		
+		A további feladatokat az előző analógiájaként végezhetjük el, az elv ugyan az. 
+		Csak a különbségeket és az eredményeket fogom részletezni.
 	
-	
-	
-	\begin{equation}
-	f(x)=x^2
-	\end{equation}
-	This formula $f(x) = x^2$ is an example.
 	
 	%---------------------
 	% 3.feladat
